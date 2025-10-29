@@ -90,7 +90,7 @@ app.patch("/updateEntireCard/:id", async (req, res) => {
 });
 
 //DELETE
-app.delete("/cards/:id", async (req, res) => {
+app.delete("/deleteCard/:id", async (req, res) => {
   try {
     const { id } = req.params; //  se lee el ID de la URL
     const deletedCard = await Card.findByIdAndDelete(id); // se elimina la tarjeta por id
