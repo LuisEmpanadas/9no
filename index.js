@@ -66,7 +66,7 @@ app.put("/updateEntireCard/:id", async (req, res) => {
   }
 });
 
-app.patch("/updateEntireCard/:id", async (req, res) => {
+app.patch("/updateCard/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const updates = req.body;
