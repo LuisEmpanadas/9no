@@ -122,6 +122,24 @@ app.post("/send", (req, res) => {
   res.status(200).send("Data received succesfully");
 });
 
+app.get("/review", (req, res) => {
+  const endpoints = [
+    "POST /createCard - Create a new card",
+    "GET /getAllCards - Get all cards",
+    "GET /getCard/:id - Get a specific card by ID",
+    "PUT /updateEntireCard/:id - Update all fields of a card",
+    "PATCH /updateCard/:id - Update specific fields of a card",
+    "DELETE /deleteCard/:id - Delete a card",
+    "GET /hola - Hello world greeting",
+    "GET /hello - Hello world greeting with Express",
+    "POST /send - Receive user and email data",
+    "GET /review - Show all available endpoints",
+  ];
+
+  const endpointList = endpoints.join("\n");
+  res.status(200).send(endpointList);
+});
+
 app.listen(3000, () => {
   console.log("Server started at http://localhost:3000");
 });
