@@ -4,7 +4,7 @@ const cardSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
     link: { type: String, required: true, trim: true },
-    description: { type: String, required: false },
+    description: { type: String },
     like: {
       type: Boolean,
       default: false,
